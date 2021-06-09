@@ -1,5 +1,5 @@
 # cryptologic
- ![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/lagerfeuer/cryptocompare/Test/master) [![Coverage Status](https://coveralls.io/repos/github/lagerfeuer/cryptocompare/badge.svg?branch=master)](https://coveralls.io/github/lagerfeuer/cryptocompare?branch=master) ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/cryptologic) [![PyPI version](https://badge.fury.io/py/cryptologic.svg)](https://badge.fury.io/py/cryptologic)
+ ![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/secretum-inc/cryptologic/Test/main) [![Coverage Status](https://coveralls.io/repos/github/secretum-inc/cryptologic/badge.svg?branch=main)](https://coveralls.io/github/secretum-inc/cryptologic?branch=main) ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/cryptologic) [![PyPI version](https://badge.fury.io/py/cryptologic.svg)](https://badge.fury.io/py/cryptologic)
 
 
 Python3 wrapper to query cryptocurrency prices (and more) using the [CryptoCompare](https://min-api.cryptocompare.com/) API.
