@@ -47,7 +47,7 @@ def _query_cryptocompare(url: str, errorCheck: bool = True, api_key: str = None)
         print('Error getting coin information. %s' % str(e))
         return None
     if errorCheck and (response.get('Response') == 'Error'):
-        print('[ERROR] %s' % response.get('Message'))
+        quo.flair(f'[ERROR] %s' % response.get('Message'))
         return None
     return response
 
