@@ -16,6 +16,7 @@ from . import getaverage
 from . import getexchanges
 from . import getpairs
 from . import getprice
+from . import pricedifference
 Timestamp = Union[datetime.datetime, datetime.date, int, float]
 
 # API
