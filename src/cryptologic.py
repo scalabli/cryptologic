@@ -202,7 +202,7 @@ def price_minute(coin: str, currency: str = CURRENCY, limit: int = LIMIT,
     return None
 
 
-def get_avg(coin: str, currency: str = CURRENCY, exchange: str = 'CCCAGG') -> Optional[Dict]:
+def get_avarage(coin: str, currency: str = CURRENCY, exchange: str = 'CCCAGG') -> Optional[Dict]:
     """
     Get the average price
 
