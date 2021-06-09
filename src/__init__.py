@@ -37,3 +37,8 @@ _URL_PAIRS = 'https://min-api.cryptocompare.com/data/pair/mapping/exchange?e={}'
 CURRENCY = 'USD'
 LIMIT = 1440
 ###############################################################################
+
+
+
+
+__version__ = "1.0.1dev"
