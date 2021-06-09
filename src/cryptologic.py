@@ -1,3 +1,7 @@
+"""
+Python wrapper for cryptocompare API
+"""
+
 import requests
 import time
 import quo
@@ -246,3 +250,9 @@ def get_pairs(exchange: str = None) -> Optional[Dict]:
     if response:
         return response['Data']
     return None
+
+
+
+
+
+__version__ = "1.0.1"
