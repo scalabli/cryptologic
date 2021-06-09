@@ -21,7 +21,7 @@ import cryptologic
 If you have an API key, you can either set it as environment variable `CRYPTOCOMPARE_API_KEY` or set it manually with: 
 
 ```
-cryptocompare.cryptocompare._set_api_key_parameter(KEY_HERE)
+cryptologic.cryptologic._set_api_key_parameter(KEY_HERE)
 ```
 
 ### Coin List
@@ -99,9 +99,9 @@ cryptologic.price_hour('BTC', 'EUR', limit=24, exchange='CCCAGG', toTs=datetime.
 #### Minute
 
 ```python
-cryptocompare.get_historical_price_minute('BTC', currency='EUR')
-cryptocompare.get_historical_price_minute('BTC', currency='EUR', limit=1440)
-cryptocompare.get_historical_price_minute('BTC', 'EUR', limit=24, exchange='CCCAGG', toTs=datetime.datetime.now())
+cryptologic.price_minute('BTC', currency='EUR')
+cryptologic.price_minute('BTC', currency='EUR', limit=1440)
+cryptologic.price_minute('BTC', 'EUR', limit=24, exchange='CCCAGG', toTs=datetime.datetime.now())
 ```
 
 ### Average
@@ -139,7 +139,7 @@ cryptologic.get_exchanges()
 
 ```python
 cryptologic.get_pairs()
-pairs = cryptocompare.get_pairs(exchange='Kraken')
+pairs = cryptologic.get_pairs(exchange='Kraken')
 ```
 
 ## Developing
