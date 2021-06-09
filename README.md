@@ -1,4 +1,5 @@
-# cryptocompare ![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/lagerfeuer/cryptocompare/Test/master) [![Coverage Status](https://coveralls.io/repos/github/lagerfeuer/cryptocompare/badge.svg?branch=master)](https://coveralls.io/github/lagerfeuer/cryptocompare?branch=master) ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/cryptocompare) [![PyPI version](https://badge.fury.io/py/cryptocompare.svg)](https://badge.fury.io/py/cryptocompare) [![Requirements Status](https://requires.io/github/lagerfeuer/cryptocompare/requirements.svg?branch=master)](https://requires.io/github/lagerfeuer/cryptocompare/requirements/?branch=master)
+# cryptologic
+ ![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/lagerfeuer/cryptocompare/Test/master) [![Coverage Status](https://coveralls.io/repos/github/lagerfeuer/cryptocompare/badge.svg?branch=master)](https://coveralls.io/github/lagerfeuer/cryptocompare?branch=master) ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/cryptologic) [![PyPI version](https://badge.fury.io/py/cryptologic.svg)](https://badge.fury.io/py/cryptologic) [![Requirements Status](https://requires.io/github/lagerfeuer/cryptocompare/requirements.svg?branch=master)](https://requires.io/github/lagerfeuer/cryptocompare/requirements/?branch=master)
 
 
 Python3 wrapper to query cryptocurrency prices (and more) using the [CryptoCompare](https://min-api.cryptocompare.com/) API.
@@ -6,13 +7,13 @@ Python3 wrapper to query cryptocurrency prices (and more) using the [CryptoCompa
 
 ## Install
 ```sh
-pip3 install cryptocompare
+pip install cryptologic
 ```
 
 ## Usage
 
 ```python
-import cryptocompare
+import cryptologic
 ```
 
 ## API Key
@@ -26,7 +27,7 @@ cryptocompare.cryptocompare._set_api_key_parameter(KEY_HERE)
 ### Coin List
 
 ```python
-cryptocompare.get_coin_list(format=False)
+cryptologic.coin_list(format=False)
 # ...
 # },
 # 'BTC': {
@@ -53,11 +54,11 @@ containing only the abbreviations (like `BTC`).
 ### Price
 
 ```python
-cryptocompare.get_price('BTC')
+cryptologic.get_price('BTC')
 # or
-cryptocompare.get_price('BTC', currency='USD', full=True)
+cryptologic.get_price('BTC', currency='USD', full=True)
 # or
-cryptocompare.get_price(['BTC', 'ETH'], ['EUR', 'GBP'])
+cryptologic.get_price(['BTC', 'ETH'], ['EUR', 'GBP'])
 
 # {'BTC': {'EUR': 3709.04, 'GBP': 3354.78},
 #  'ETH': {'EUR': 258.1, 'GBP': 241.25}}
@@ -67,9 +68,9 @@ cryptocompare.get_price(['BTC', 'ETH'], ['EUR', 'GBP'])
 
 ```python
 # pass either datetime or time instance
-cryptocompare.get_historical_price('XMR', timestamp=datetime.datetime(2017,6,6), exchange='CCCAGG')
+cryptologic.price('XMR', timestamp=datetime.datetime(2017,6,6), exchange='CCCAGG')
 # or
-cryptocompare.get_historical_price('XMR', 'EUR', datetime.datetime(2017,6,6))
+cryptologic.price('XMR', 'EUR', datetime.datetime(2017,6,6))
 
 # {'XMR': {'EUR': 43.05}}
 ```
@@ -77,11 +78,11 @@ cryptocompare.get_historical_price('XMR', 'EUR', datetime.datetime(2017,6,6))
 #### Day
 
 ```python
-cryptocompare.get_historical_price_day('BTC', currency='EUR')
-cryptocompare.get_historical_price_day('BTC', currency='EUR', limit=30)
-cryptocompare.get_historical_price_day('BTC', 'EUR', limit=24, exchange='CCCAGG', toTs=datetime.datetime(2019,6,6))
+cryptologic.price_day('BTC', currency='EUR')
+cryptologic.price_day('BTC', currency='EUR', limit=30)
+cryptologic.price_day('BTC', 'EUR', limit=24, exchange='CCCAGG', toTs=datetime.datetime(2019,6,6))
 # or
-cryptocompare.get_historical_price_day('BTC', 'EUR', limit=24, exchange='CCCAGG', toTs=datetime.datetime(1559815200))
+cryptologic.price_day('BTC', 'EUR', limit=24, exchange='CCCAGG', toTs=datetime.datetime(1559815200))
 ```
 
 #### Hour
