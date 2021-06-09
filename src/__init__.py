@@ -12,15 +12,17 @@ from typing import Union, Optional, List, Dict
 from .formatter import _format_parameter
 from .formatter import _format_timestamp
 from .formatter import _set_api_key_parameter
-from . import query_cryptocompare
+from .query_cryptocompare import _query_cryptocompare
 from .coinlist import coin_list
 from .getaverage import get_average
 from .getexchanges import get_exchanges 
 from .getpairs import get_pairs
 from .pricedifference import get_price
 from .pricedifference import price
+from .pricedifference import price_day
+from .pricedifference import price_hour
+from .pricedifference import price_minute
 
-from . import pricedifference
 Timestamp = Union[datetime.datetime, datetime.date, int, float]
 
 # API
