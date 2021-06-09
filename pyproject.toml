@@ -1,0 +1,68 @@
+[build-system]
+requires = ["flit_core >=2,<3"]
+build-backend = "flit_core.buildapi"
+
+[tool.flit.metadata]
+module = "cryptologic"
+author = "Gerrishon Sirere"
+author-email = "secretum.inc@pm.me"
+home-page = "https://github.com/secretum-inc/cryptologic"
+
+classifiers = [
+    "Intended Audience :: Information Technology",
+    "Intended Audience :: System Administrators",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python",
+    "Topic :: Software Development :: Libraries :: Application Frameworks",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Software Development",
+    "Environment :: Web Environment",
+    "Framework :: AsyncIO",
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Internet :: WWW/HTTP :: HTTP Servers",
+    "Topic :: Internet :: WWW/HTTP"
+    ]
+requires = [
+
+]
+description-file = "README.md"
+requires-python = ">=3.6"
+
+[tool.flit.metadata.urls]
+Documentation = "https://github.com/secretum-inc/cryptologic"
+
+[tool.flit.metadata.requires-extra]
+test = [
+
+
+]
+doc = [
+   
+]
+dev = [
+    
+
+]
+all = [
+    "requests >=2.24.0,<3.0.0",
+    "quo >=2021.5.dev11,
+    
+
+]
+
+[tool.isort]
+profile = "black"
+known_third_party = ["cryptologic",]
+skip_glob = [
+    "tests/test1.py",
+    "tests/test2.py",
+    "tests/test3.py",
+    ]
