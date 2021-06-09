@@ -1,6 +1,4 @@
-# cryptologic
-
-# cryptologic ![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/secretum-inc/cryptologic/Test/main) [![Coverage Status](https://coveralls.io/repos/github/lagerfeuer/cryptocompare/badge.svg?branch=master)](https://coveralls.io/github/lagerfeuer/cryptocompare?branch=master) ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/cryptologic) [![PyPI version](https://badge.fury.io/py/cryptologic.svg)](https://badge.fury.io/py/cryptologic) [![Requirements Status](https://requires.io/github/secretum-inc/cryptologic/requirements.svg?branch=main)](https://requires.io/github/secretum-inc/cryptologic/requirements/?branch=main)
+# cryptocompare ![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/lagerfeuer/cryptocompare/Test/master) [![Coverage Status](https://coveralls.io/repos/github/lagerfeuer/cryptocompare/badge.svg?branch=master)](https://coveralls.io/github/lagerfeuer/cryptocompare?branch=master) ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/cryptocompare) [![PyPI version](https://badge.fury.io/py/cryptocompare.svg)](https://badge.fury.io/py/cryptocompare) [![Requirements Status](https://requires.io/github/lagerfeuer/cryptocompare/requirements.svg?branch=master)](https://requires.io/github/lagerfeuer/cryptocompare/requirements/?branch=master)
 
 
 Python3 wrapper to query cryptocurrency prices (and more) using the [CryptoCompare](https://min-api.cryptocompare.com/) API.
@@ -8,13 +6,13 @@ Python3 wrapper to query cryptocurrency prices (and more) using the [CryptoCompa
 
 ## Install
 ```sh
-pip install cryptologic
+pip3 install cryptocompare
 ```
 
 ## Usage
 
 ```python
-import cryptologic
+import cryptocompare
 ```
 
 ## API Key
@@ -22,13 +20,13 @@ import cryptologic
 If you have an API key, you can either set it as environment variable `CRYPTOCOMPARE_API_KEY` or set it manually with: 
 
 ```
-cryptologic.cryptologic._set_api_key_parameter(KEY_HERE)
+cryptocompare.cryptocompare._set_api_key_parameter(KEY_HERE)
 ```
 
 ### Coin List
 
 ```python
-cryptologic.get_coin_list(format=False)
+cryptocompare.get_coin_list(format=False)
 # ...
 # },
 # 'BTC': {
@@ -55,11 +53,11 @@ containing only the abbreviations (like `BTC`).
 ### Price
 
 ```python
-cryptologic.get_price('BTC')
+cryptocompare.get_price('BTC')
 # or
-cryptologic.get_price('BTC', currency='USD', full=True)
+cryptocompare.get_price('BTC', currency='USD', full=True)
 # or
-cryptologic.get_price(['BTC', 'ETH'], ['EUR', 'GBP'])
+cryptocompare.get_price(['BTC', 'ETH'], ['EUR', 'GBP'])
 
 # {'BTC': {'EUR': 3709.04, 'GBP': 3354.78},
 #  'ETH': {'EUR': 258.1, 'GBP': 241.25}}
@@ -89,12 +87,12 @@ cryptocompare.get_historical_price_day('BTC', 'EUR', limit=24, exchange='CCCAGG'
 #### Hour
 
 ```python
-cryptocompare.get_historical_price_hour('BTC', currency='EUR')
-cryptocompare.get_historical_price_hour('BTC', currency='EUR', limit=24)
-cryptocompare.get_historical_price_hour('BTC', 'EUR', limit=24, exchange='CCCAGG')
-cryptocompare.get_historical_price_hour('BTC', 'EUR', limit=24, exchange='CCCAGG', toTs=datetime.datetime(2019,6,6,12))
+cryptologic.price_hour('BTC', currency='USD')
+cryptologic.price_hour('BTC', currency='EUR', limit=24)
+cryptologic.price_hour('BTC', 'EUR', limit=24, exchange='CCCAGG')
+cryptologic.price_hour('BTC', 'EUR', limit=24, exchange='CCCAGG', toTs=datetime.datetime(2019,6,6,12))
 # or
-cryptocompare.get_historical_price_hour('BTC', 'EUR', limit=24, exchange='CCCAGG', toTs=datetime.datetime(1559815200))
+cryptologic.price_hour('BTC', 'EUR', limit=24, exchange='CCCAGG', toTs=datetime.datetime(1559815200))
 ```
 
 #### Minute
@@ -108,7 +106,7 @@ cryptocompare.get_historical_price_minute('BTC', 'EUR', limit=24, exchange='CCCA
 ### Average
 
 ```python
-cryptologic.get_avg('BTC', currency='EUR', exchange='Kraken')
+cryptologic.get_average('BTC', currency='EUR', exchange='Kraken')
 # {
 # 'MARKET': 'CUSTOMAGG',
 # 'FROMSYMBOL': 'BTC',
@@ -139,7 +137,7 @@ cryptologic.get_exchanges()
 ### Pairs
 
 ```python
-cryptocompare.get_pairs()
+cryptologic.get_pairs()
 pairs = cryptocompare.get_pairs(exchange='Kraken')
 ```
 
@@ -155,8 +153,3 @@ python3 -m pytest
 
 * The [CryptoCompare API](https://min-api.cryptocompare.com/).
 
-## Disclaimer
-
-This is a hobby project, no guarantees.
-If you find bugs or want additional features,
-open an issue and/or create a pull request.
