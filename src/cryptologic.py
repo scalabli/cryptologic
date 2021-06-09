@@ -85,7 +85,7 @@ def _set_api_key_parameter(api_key: str = None) -> str:
 ###############################################################################
 
 
-def get_coin_list(format: bool = False) -> Union[Dict, List, None]:
+def coin_list(format: bool = False) -> Union[Dict, List, None]:
     """
     Get the coin list (all available coins).
 
