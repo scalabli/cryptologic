@@ -1,3 +1,5 @@
+import quo
+
 def _query_cryptocompare(url: str, errorCheck: bool = True, api_key: str = None) -> Optional[Dict]:
     """
     Query the url and return the result or None on failure.
