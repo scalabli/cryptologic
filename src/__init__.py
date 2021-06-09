@@ -9,13 +9,17 @@ import datetime
 import typing
 import os
 from typing import Union, Optional, List, Dict
-from . import formatter
+from .formatter import _format_parameter
+from .formatter import _format_timestamp
+from .formatter import _set_api_key_parameter
 from . import query_cryptocompare
-from . import coinlist
-from . import getaverage
-from . import getexchanges
-from . import getpairs
-from . import getprice
+from .coinlist import coin_list
+from .getaverage import get_average
+from .getexchanges import get_exchanges 
+from .getpairs import get_pairs
+from .pricedifference import get_price
+from .pricedifference import price
+
 from . import pricedifference
 Timestamp = Union[datetime.datetime, datetime.date, int, float]
 
