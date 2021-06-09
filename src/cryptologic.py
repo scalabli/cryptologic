@@ -125,7 +125,7 @@ def get_price(coin: str, currency: str = CURRENCY, full: bool = False) -> Option
     )
 
 
-def get_historical_price(coin: str, currency: str = CURRENCY, timestamp: Timestamp = time.time(),
+def price(coin: str, currency: str = CURRENCY, timestamp: Timestamp = time.time(),
                          exchange: str = 'CCCAGG') -> Optional[Dict]:
     """
     Get the price of a coin in a given currency during a specific time.
@@ -144,7 +144,7 @@ def get_historical_price(coin: str, currency: str = CURRENCY, timestamp: Timesta
     )
 
 
-def get_historical_price_day(coin: str, currency: str = CURRENCY, limit: int = LIMIT,
+def price_day(coin: str, currency: str = CURRENCY, limit: int = LIMIT,
                              exchange: str = 'CCCAGG', toTs: Timestamp = time.time()) -> Optional[Dict]:
     """
     Get historical price (day).
@@ -163,7 +163,7 @@ def get_historical_price_day(coin: str, currency: str = CURRENCY, limit: int = L
     return None
 
 
-def get_historical_price_hour(coin: str, currency: str = CURRENCY, limit: int = LIMIT,
+def price_hour(coin: str, currency: str = CURRENCY, limit: int = LIMIT,
                               exchange: str = 'CCCAGG', toTs: Timestamp = time.time()) -> Optional[Dict]:
     """
     Get historical price (hourly).
@@ -183,7 +183,7 @@ def get_historical_price_hour(coin: str, currency: str = CURRENCY, limit: int = 
     return None
 
 
-def get_historical_price_minute(coin: str, currency: str = CURRENCY, limit: int = LIMIT,
+def price_minute(coin: str, currency: str = CURRENCY, limit: int = LIMIT,
                                 exchange: str = 'CCCAGG', toTs: Timestamp = time.time()) -> Optional[Dict]:
     """
     Get historical price (minute).
