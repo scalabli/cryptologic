@@ -47,7 +47,7 @@ def _query_cryptocompare(url: str, errorCheck: bool = True, api_key: str = None)
         quo.echo('Error getting coin information. %s' % str(e))
         return None
     if errorCheck and (response.get('Response') == 'Error'):
-        quo.echo('[ERROR] %s' % response.get('Message'))
+        quo.flair(f"[ERROR] %s' % response.get('Message')", background="red")
         return None
     return response
 
@@ -255,4 +255,4 @@ def get_pairs(exchange: str = None) -> Optional[Dict]:
 
 
 
-__version__ = "1.0.1"
+__version__ = "1.0.2"
