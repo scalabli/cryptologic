@@ -47,4 +47,4 @@ LIMIT = 1440
 
 
 
-__version__ = "1.0.1dev"
+__version__ = "1.0.2" 
