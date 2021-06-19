@@ -55,7 +55,7 @@ all = [
     "requests >=2.24.0,<3.0.0",
     "astroid==2.4.2", 
     "attrs==20.3.0",
-    "quo==2021.5.dev15",
+    "quo==2021.1",
     "autopep8==1.5.4", 
     "certifi==2020.12.5",
     "chardet==4.0.0",
